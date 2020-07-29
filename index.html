@@ -16,16 +16,20 @@
   </style>
 </head>
 <body>
-  <img class="bg-pattern" src="images/bg-pattern-desktop.svg" alt="background-pattern">
+  <img src="images/logo.svg" class="logo" alt="logo">
+  <img src="images/hero-desktop.jpg" class="hero" alt="hero-desktop">
+  <!-- <img class="bg-pattern" src="images/bg-pattern-desktop.svg" alt="background-pattern"> -->
   <div class="content">
-    <img src="images/logo.svg" class="logo" alt="logo">
     <h1 class="comingsoon"><span class="were">WE'RE</span><br />COMING<br />SOON</h1>
     <p class="discription">Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.</p>
 
-    <form class="email" method="post">
-      <input type="email" name="email" placeholder="emailaddress" value="">
-      <button type="submit" name="button"><img src="images/icon-arrow.svg" class="arrowicon" alt="arrowicon"></button>
-      <img src="images/icon-error.svg" class="erroricon" alt="erroricon">
+    <form class="email" onsubmit="return ValidateEmail();" method="post">
+      <input type="email" class="email error" name="email" placeholder="Email Address" autocomplete="off">
+      <div class="share">
+        <img src="images/icon-error.svg" class="erroricon" alt="erroricon">
+        <button type="submit" formnovalidate="formnovalidate"  name="submit"><img src="images/icon-arrow.svg" class="arrowicon" alt="arrowicon"></button>
+      </div>
+      <p class="errormsg">Please provide a valid email</p>
     </form>
   </div>
   <!-- We're coming soon
@@ -42,4 +46,7 @@
     </p>
   </footer> -->
 </body>
+<script src="index.js"></script>
+
+</script>
 </html>
